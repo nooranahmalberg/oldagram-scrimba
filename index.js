@@ -3,8 +3,8 @@ const posts = [
     name: "Vincent van Gogh",
     username: "vincey1853",
     location: "Zundert, Netherlands",
-    avatar: "dist/avatar-vangogh.jpg",
-    post: "dist/post-vangogh.jpg",
+    avatar: "assets/avatar-vangogh.jpg",
+    post: "assets/post-vangogh.jpg",
     comment: "just took a few mushrooms lol",
     likes: 21,
   },
@@ -12,8 +12,8 @@ const posts = [
     name: "Gustave Courbet",
     username: "gus1819",
     location: "Ornans, France",
-    avatar: "dist/avatar-courbet.jpg",
-    post: "dist/post-courbet.jpg",
+    avatar: "assets/avatar-courbet.jpg",
+    post: "assets/post-courbet.jpg",
     comment: "i'm feelin a bit stressed tbh",
     likes: 4,
   },
@@ -21,8 +21,8 @@ const posts = [
     name: "Joseph Ducreux",
     username: "jd1735",
     location: "Paris, France",
-    avatar: "dist/avatar-ducreux.jpg",
-    post: "dist/post-ducreux.jpg",
+    avatar: "assets/avatar-ducreux.jpg",
+    post: "assets/post-ducreux.jpg",
     comment:
       "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
     likes: 152,
@@ -49,14 +49,14 @@ function createRender() {
               <span id="location" class="location">${posts[i].location}</span>
             </div>
           </div>
-          <img id="post" class="post-image" src="dist/${posts[i].post}" />
+          <img id="post" class="post-image" src="assets/${posts[i].post}" />
           <div class="post-details">
             <div class="actions-bar">
               <button class="like-button">
-                <img class="like-icon post-action" src="dist/icon-heart.png" />
+                <img class="like-icon post-action" src="assets/icon-heart.png" />
               </button>
-              <img class="post-action" src="dist/icon-comment.png" />
-              <img class="post-action" src="dist/icon-dm.png" />
+              <img class="post-action" src="assets/icon-comment.png" />
+              <img class="post-action" src="assets/icon-dm.png" />
             </div>
             <div class="actions-bar">
               <span class="likes bold-text">${posts[i].likes.toLocaleString(
@@ -80,19 +80,19 @@ likeBtn[0].addEventListener("click", function () {
   let addLike1 = (posts[0].likes += 1);
   likesCount[0].textContent = addLike1.toLocaleString("en-US");
   likeBtn[0].disabled = true;
-  likeIcon[0].src = "dist/red-heart.png";
+  likeIcon[0].src = "assets/red-heart.png";
 });
 
 likeBtn[1].addEventListener("click", function () {
   let addLike2 = (posts[1].likes += 1);
   likesCount[1].textContent = addLike2.toLocaleString("en-US");
-  likeIcon[1].src = "dist/red-heart.png";
+  likeIcon[1].src = "assets/red-heart.png";
   likeBtn[1].disabled = true;
 });
 
 likeBtn[2].addEventListener("click", function () {
   let addLike3 = (posts[2].likes += 1);
   likesCount[2].textContent = addLike3.toLocaleString("en-US");
-  likeIcon[2].src = "dist/red-heart.png";
+  likeIcon[2].src = "assets/red-heart.png";
   likeBtn[2].disabled = true;
 });
