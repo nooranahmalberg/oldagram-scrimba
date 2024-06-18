@@ -48,7 +48,7 @@ main,
 .actions-bar {
   display: flex;
   flex-direction: row;
-  gap: 6px;
+  gap: 5px;
 }
 
 /* typography */

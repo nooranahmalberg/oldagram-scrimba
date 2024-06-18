@@ -57,16 +57,16 @@ for (let i = 0; i < posts.length; i++) {
                 <svg class="post-action" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M18.258 19.5047L20.0192 19.8825L19.6415 18.1213L19.3575 16.7974C20.4901 15.3331 21.165 13.4942 21.165 11.5C21.165 6.71446 17.2855 2.83502 12.5 2.83502C7.71446 2.83502 3.83502 6.71446 3.83502 11.5C3.83502 16.2855 7.71446 20.165 12.5 20.165C13.9739 20.165 15.3645 19.7961 16.5817 19.1451L18.258 19.5047Z" stroke="black" stroke-width="2"/>
                 </svg>
-                <svg class="post-action" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M8.77778 11.6667L10.6832 20.2411C10.7974 20.755 11.4805 20.8658 11.7513 20.4145L20.4707 5.88218C20.7036 5.49393 20.424 5 19.9712 5H2.57462C2.03383 5 1.78495 5.67281 2.19554 6.02475L8.77778 11.6667ZM8.77778 11.6667L19.8889 5.55556" stroke-width="2"/>
+                <svg class="post-action" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.77778 12.6667L11.6832 21.2411C11.7974 21.755 12.4805 21.8658 12.7513 21.4145L21.4707 6.88218C21.7036 6.49393 21.424 6 20.9712 6H3.57462C3.03383 6 2.78495 6.67281 3.19554 7.02475L9.77778 12.6667ZM9.77778 12.6667L20.8889 6.55556" stroke="black" stroke-width="2"/>
                 </svg>
             </div>
             <div class="actions-bar">
               <span class="likes bold-text"><span class="likes-count">${posts[i].likes}</span> likes</span>
             </div>
             <div class="post-description">
-              <span id="username" class="bold-text">${posts[i].username}</span>
-              <span id="comment">${posts[i].comment}</span>
+              <span class="bold-text">${posts[i].username}</span>
+              <span>${posts[i].comment}</span>
             </div>
           </div>
         </div>`;
