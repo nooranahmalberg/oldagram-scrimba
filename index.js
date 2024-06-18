@@ -35,10 +35,13 @@ const likeIcon = document.getElementsByClassName("like-icon");
 const likesCount = document.getElementsByClassName("likes");
 const post = document.getElementsByClassName("post-image");
 
-function createRender() {
-  let postRender = "";
+let likeCounter = 0;
+
+// Render posts
+function renderPosts() {
+  let postContainers = "";
   for (let i = 0; i < posts.length; i++) {
-    postRender += `<div class="post-container">
+    postContainers += `<div class="post-container">
           <div class="post-title">
             <img
               class="post-avatar"
@@ -71,33 +74,50 @@ function createRender() {
           </div>
         </div>`;
   }
-  main.innerHTML = postRender;
+  main.innerHTML = postContainers;
 }
+renderPosts();
 
-createRender();
+// Double click post to like
+post[0].addEventListener(
+  "dblclick",
+  function () {
+    likeCounter = 1;
+    let addLike6 = (posts[0].likes += 1);
+    likesCount[0].textContent = addLike6.toLocaleString("en-US");
+    likeBtn[0].disabled = true;
+    likeIcon[0].src = "red-heart.png";
+  },
+  { once: true }
+);
 
-post[0].addEventListener("dblclick", function () {
-  let addLike6 = (posts[0].likes += 1);
-  likesCount[0].textContent = addLike6.toLocaleString("en-US");
-  likeBtn[0].disabled = true;
-  likeIcon[0].src = "red-heart.png";
-});
+post[1].addEventListener(
+  "dblclick",
+  function () {
+    likeCounter = 1;
+    let addLike5 = (posts[1].likes += 1);
+    likesCount[1].textContent = addLike5.toLocaleString("en-US");
+    likeBtn[1].disabled = true;
+    likeIcon[1].src = "red-heart.png";
+  },
+  { once: true }
+);
 
-post[1].addEventListener("dblclick", function () {
-  let addLike5 = (posts[1].likes += 1);
-  likesCount[1].textContent = addLike5.toLocaleString("en-US");
-  likeBtn[1].disabled = true;
-  likeIcon[1].src = "red-heart.png";
-});
+post[2].addEventListener(
+  "dblclick",
+  function () {
+    likeCounter = 1;
+    let addLike4 = (posts[2].likes += 1);
+    likesCount[2].textContent = addLike4.toLocaleString("en-US");
+    likeBtn[2].disabled = true;
+    likeIcon[2].src = "red-heart.png";
+  },
+  { once: true }
+);
 
-post[2].addEventListener("dblclick", function () {
-  let addLike4 = (posts[2].likes += 1);
-  likesCount[2].textContent = addLike4.toLocaleString("en-US");
-  likeBtn[2].disabled = true;
-  likeIcon[2].src = "red-heart.png";
-});
-
+// Click heart to like
 likeBtn[0].addEventListener("click", function () {
+  likeCounter = 1;
   let addLike1 = (posts[0].likes += 1);
   likesCount[0].textContent = addLike1.toLocaleString("en-US");
   likeBtn[0].disabled = true;
@@ -105,6 +125,7 @@ likeBtn[0].addEventListener("click", function () {
 });
 
 likeBtn[1].addEventListener("click", function () {
+  likeCounter = 1;
   let addLike2 = (posts[1].likes += 1);
   likesCount[1].textContent = addLike2.toLocaleString("en-US");
   likeIcon[1].src = "red-heart.png";
@@ -112,6 +133,7 @@ likeBtn[1].addEventListener("click", function () {
 });
 
 likeBtn[2].addEventListener("click", function () {
+  likeCounter = 1;
   let addLike3 = (posts[2].likes += 1);
   likesCount[2].textContent = addLike3.toLocaleString("en-US");
   likeIcon[2].src = "red-heart.png";
