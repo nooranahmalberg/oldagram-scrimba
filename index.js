@@ -33,6 +33,7 @@ const main = document.querySelector("main");
 const likeBtn = document.getElementsByClassName("like-button");
 const likeIcon = document.getElementsByClassName("like-icon");
 const likesCount = document.getElementsByClassName("likes");
+const post = document.getElementsByClassName("post-image");
 
 function createRender() {
   let postRender = "";
@@ -40,16 +41,15 @@ function createRender() {
     postRender += `<div class="post-container">
           <div class="post-title">
             <img
-              id="avatar"
               class="post-avatar"
               src="${posts[i].avatar}"
             />
             <div class="title-text">
-              <span id="name" class="bold-text">${posts[i].name}</span>
-              <span id="location" class="location">${posts[i].location}</span>
+              <span class="bold-text">${posts[i].name}</span>
+              <span class="location">${posts[i].location}</span>
             </div>
           </div>
-          <img id="post" class="post-image" src="${posts[i].post}" />
+          <img class="post-image" src="${posts[i].post}" />
           <div class="post-details">
             <div class="actions-bar">
               <button class="like-button">
@@ -75,6 +75,27 @@ function createRender() {
 }
 
 createRender();
+
+post[0].addEventListener("dblclick", function () {
+  let addLike6 = (posts[0].likes += 1);
+  likesCount[0].textContent = addLike6.toLocaleString("en-US");
+  likeBtn[0].disabled = true;
+  likeIcon[0].src = "red-heart.png";
+});
+
+post[1].addEventListener("dblclick", function () {
+  let addLike5 = (posts[1].likes += 1);
+  likesCount[1].textContent = addLike5.toLocaleString("en-US");
+  likeBtn[1].disabled = true;
+  likeIcon[1].src = "red-heart.png";
+});
+
+post[2].addEventListener("dblclick", function () {
+  let addLike4 = (posts[2].likes += 1);
+  likesCount[2].textContent = addLike4.toLocaleString("en-US");
+  likeBtn[2].disabled = true;
+  likeIcon[2].src = "red-heart.png";
+});
 
 likeBtn[0].addEventListener("click", function () {
   let addLike1 = (posts[0].likes += 1);
