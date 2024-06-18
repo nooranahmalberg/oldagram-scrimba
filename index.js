@@ -42,21 +42,21 @@ function createRender() {
             <img
               id="avatar"
               class="post-avatar"
-              src="./${posts[i].avatar}"
+              src=${posts[i].avatar}"
             />
             <div class="title-text">
               <span id="name" class="bold-text">${posts[i].name}</span>
               <span id="location" class="location">${posts[i].location}</span>
             </div>
           </div>
-          <img id="post" class="post-image" src="./${posts[i].post}" />
+          <img id="post" class="post-image" src=${posts[i].post}" />
           <div class="post-details">
             <div class="actions-bar">
               <button class="like-button">
-                <img class="like-icon post-action" src="./images/icon-heart.png" />
+                <img class="like-icon post-action" src=images/icon-heart.png" />
               </button>
-              <img class="post-action" src="./images/icon-comment.png" />
-              <img class="post-action" src="./images/icon-dm.png" />
+              <img class="post-action" src=images/icon-comment.png" />
+              <img class="post-action" src=images/icon-dm.png" />
             </div>
             <div class="actions-bar">
               <span class="likes bold-text">${posts[i].likes.toLocaleString(
@@ -80,19 +80,19 @@ likeBtn[0].addEventListener("click", function () {
   let addLike1 = (posts[0].likes += 1);
   likesCount[0].textContent = addLike1.toLocaleString("en-US");
   likeBtn[0].disabled = true;
-  likeIcon[0].src = "./images/red-heart.png";
+  likeIcon[0].src = "images/red-heart.png";
 });
 
 likeBtn[1].addEventListener("click", function () {
   let addLike2 = (posts[1].likes += 1);
   likesCount[1].textContent = addLike2.toLocaleString("en-US");
-  likeIcon[1].src = "./images/red-heart.png";
+  likeIcon[1].src = "images/red-heart.png";
   likeBtn[1].disabled = true;
 });
 
 likeBtn[2].addEventListener("click", function () {
   let addLike3 = (posts[2].likes += 1);
   likesCount[2].textContent = addLike3.toLocaleString("en-US");
-  likeIcon[2].src = "./images/red-heart.png";
+  likeIcon[2].src = "images/red-heart.png";
   likeBtn[2].disabled = true;
 });
