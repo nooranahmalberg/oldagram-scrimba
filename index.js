@@ -53,7 +53,7 @@ function createRender() {
           <div class="post-details">
             <div class="actions-bar">
               <button class="like-button">
-                <img class="like-icon post-action" src="images/icon-heart.png" />
+                <img class="like-icon post-action" src="./images/icon-heart.png" />
               </button>
               <img class="post-action" src="images/icon-comment.png" />
               <img class="post-action" src="images/icon-dm.png" />
