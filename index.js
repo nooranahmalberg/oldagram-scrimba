@@ -3,8 +3,8 @@ const posts = [
     name: "Vincent van Gogh",
     username: "vincey1853",
     location: "Zundert, Netherlands",
-    avatar: "images/avatar-vangogh.jpg",
-    post: "images/post-vangogh.jpg",
+    avatar: "public/avatar-vangogh.jpg",
+    post: "public/post-vangogh.jpg",
     comment: "just took a few mushrooms lol",
     likes: 21,
   },
@@ -12,8 +12,8 @@ const posts = [
     name: "Gustave Courbet",
     username: "gus1819",
     location: "Ornans, France",
-    avatar: "images/avatar-courbet.jpg",
-    post: "images/post-courbet.jpg",
+    avatar: "public/avatar-courbet.jpg",
+    post: "public/post-courbet.jpg",
     comment: "i'm feelin a bit stressed tbh",
     likes: 4,
   },
@@ -21,8 +21,8 @@ const posts = [
     name: "Joseph Ducreux",
     username: "jd1735",
     location: "Paris, France",
-    avatar: "images/avatar-ducreux.jpg",
-    post: "images/post-ducreux.jpg",
+    avatar: "public/avatar-ducreux.jpg",
+    post: "public/post-ducreux.jpg",
     comment:
       "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
     likes: 152,
@@ -53,10 +53,10 @@ function createRender() {
           <div class="post-details">
             <div class="actions-bar">
               <button class="like-button">
-                <img class="like-icon post-action" src=images/icon-heart.png" />
+                <img class="like-icon post-action" src=public/icon-heart.png" />
               </button>
-              <img class="post-action" src=images/icon-comment.png" />
-              <img class="post-action" src=images/icon-dm.png" />
+              <img class="post-action" src=public/icon-comment.png" />
+              <img class="post-action" src=public/icon-dm.png" />
             </div>
             <div class="actions-bar">
               <span class="likes bold-text">${posts[i].likes.toLocaleString(
@@ -80,19 +80,19 @@ likeBtn[0].addEventListener("click", function () {
   let addLike1 = (posts[0].likes += 1);
   likesCount[0].textContent = addLike1.toLocaleString("en-US");
   likeBtn[0].disabled = true;
-  likeIcon[0].src = "images/red-heart.png";
+  likeIcon[0].src = "public/red-heart.png";
 });
 
 likeBtn[1].addEventListener("click", function () {
   let addLike2 = (posts[1].likes += 1);
   likesCount[1].textContent = addLike2.toLocaleString("en-US");
-  likeIcon[1].src = "images/red-heart.png";
+  likeIcon[1].src = "public/red-heart.png";
   likeBtn[1].disabled = true;
 });
 
 likeBtn[2].addEventListener("click", function () {
   let addLike3 = (posts[2].likes += 1);
   likesCount[2].textContent = addLike3.toLocaleString("en-US");
-  likeIcon[2].src = "images/red-heart.png";
+  likeIcon[2].src = "public/red-heart.png";
   likeBtn[2].disabled = true;
 });
