@@ -42,7 +42,7 @@ function createRender() {
             <img
               id="avatar"
               class="post-avatar"
-              src=${posts[i].avatar}"
+              src="${posts[i].avatar}"
             />
             <div class="title-text">
               <span id="name" class="bold-text">${posts[i].name}</span>
