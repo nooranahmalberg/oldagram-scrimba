@@ -34,7 +34,6 @@ const main = document.querySelector("main");
 // Render posts
 let postContainers = "";
 for (let i = 0; i < posts.length; i++) {
-  let details = posts[i];
   postContainers += `<div class="post-container">
           <div class="post-title">
             <img
