@@ -45,6 +45,12 @@ main,
   gap: 6px;
 }
 
+.actions-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
 /* typography */
 
 .bold-text {
@@ -57,27 +63,37 @@ main,
   height: 56px;
 }
 
+.user-avatar,
+.post-avatar {
+  border-radius: 100%;
+}
+
 .user-avatar {
   height: 34px;
-  border-radius: 100%;
 }
 
 .post-avatar {
   height: 38px;
-  border-radius: 100%;
 }
 
 .post-image {
   width: 100%;
 }
 
-.post-action {
-  width: 24px;
-  margin-right: 6px;
-}
+/* icon-buttons */
 
 .post-action:hover {
   opacity: 40%;
+}
+
+.post-action {
+  fill: none;
+  stroke: black;
+}
+
+.like-button.active svg {
+  fill: red;
+  stroke: red;
 }
 
 button {
@@ -87,6 +103,8 @@ button {
   height: fit-content;
   border: none;
 }
+
+/* responsiveness */
 
 @media (max-width: 768px) {
   html,
